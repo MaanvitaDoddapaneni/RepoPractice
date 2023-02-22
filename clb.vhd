@@ -1,0 +1,3 @@
+-- library declaration
+-- entity
+-- architecture
