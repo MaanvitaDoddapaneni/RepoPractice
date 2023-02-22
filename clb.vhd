@@ -29,18 +29,18 @@ end adder16bit;
     
        output <= in1 + in2;
        
-       process(CLK)
+       process(clk) -- process
        begin
        if (rising_edge(clk)) then
-        if(reset = '1') then
-          output <= (others => '0');
-          in1 <= (others => '0');
-          in2 <= (others => '0');
-        elsif (clk_enable = '1') then
-          in1 <= a;
-          in2 <= b;
-          addOut <= output;
-        end if;
+          if(reset = '1') then
+            output <= (others => '0');
+            in1 <= (others => '0');
+            in2 <= (others => '0');
+          elsif (clk_enable = '1') then
+            in1 <= a;
+            in2 <= b;
+            addOut <= output;
+          end if;
        end if;
  end process;        
 end added;
