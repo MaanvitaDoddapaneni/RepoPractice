@@ -19,6 +19,7 @@ end adder16bit;
        end component;
  
  begin  
+     -- is this part needed if we have assignments in the process?
        adding : adder16bit
          port map( in1 <= a;
                    in2 <= b;
@@ -26,7 +27,8 @@ end adder16bit;
                    reset <= reset;
                    clk_enable <= clk_enable;
                    output <= abOut);
-    
+     -----------------------------------------------------------------
+              
        output <= in1 + in2;
        
        process(clk) -- process
